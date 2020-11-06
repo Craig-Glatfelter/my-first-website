@@ -1,0 +1,31 @@
+#nav-left{
+    float: left;
+   
+}
+#nav-right{
+    float:right;
+
+}
+li{
+    display:inline;
+    padding-right: 5px;
+    
+}
+a{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .9em;
+    color:black;
+}
+a:hover{
+    text-decoration: underline;
+}
+#logo{
+    display:block;
+    position:relative;
+
+}
+img{
+    width:272px;
+    height:auto;
+}
