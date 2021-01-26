@@ -1,0 +1,36 @@
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex: 1;
+   align-content: center;
+ }
+ ul {
+   list-style-type: none;
+ }
+ 
+ ul :hover{
+   background-color: black;
+ }
+ 
+ li {
+   background-color: gray;
+   flex: 1;
+   border: 2px solid #333;
+   text-align: center;
+   font-size: x-large;
+ }
+ a {
+   text-decoration: none;
+   color: white;
+ }
+ * {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+  }
+  body {
+    height:100vh;
+    background-color: #333;
+  }
