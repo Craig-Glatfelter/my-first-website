@@ -1,0 +1,59 @@
+select, textarea {
+    width: 92%;
+    display: block;
+    margin: 10px 5px;
+    color: black;
+    font-size: large;
+    padding: 10px 5px;
+    border-radius: 5px;
+    
+}
+form{
+    background-color: rgba(36, 160, 209, 0.55);
+    margin: auto 20%;
+    border-radius: 5px;
+    width: 50%;
+    
+}
+body{
+    background-image: url(../cat.jpg);
+}
+p{
+    color: white;
+    font-size: large;
+    padding-left: 5px;
+    text-align: left;
+}
+h1, #description{
+    text-align: center;
+    color: white;
+}
+#name,#email,#number{
+    color:black;
+    padding:2px 5px;
+    margin:10px 5px;
+    position: relative;
+    width: 90%;
+    font-size: large;
+    border-radius: 5px;
+    border: gray solid 2px;
+   
+
+}
+label{
+    color: white;
+    font-size: large;
+    padding:2px 5px;
+}
+.label{
+    display: block;
+}
+input[type=checkbox]{
+    
+}
+#submit{
+    margin: 10px 5px;
+    padding: 2px 5px;
+    width:95%;
+    background-color: rgba(25, 216, 25, .65);
+}

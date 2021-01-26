@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="survey-style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <script>
+      reverseString = (str) => {
+    let revStr = "";
+    for (let count = str.length - 1; count >= 0; count--) { 
+    revStr += str[count];
+  }
+  return revStr;
+  }
+  prompt("Name:", "");
+    </script>
+</head>
+<body>
+    <h1 id="title">Take Another Survey!</h1>
+    <p id="description">This is a survey.  Please take this survey for the sake of taking surveys.  You will not be displeased.  After you are finished, you will receive a very rewarding e-mail.  The reward comes from within... </p>  
+    <form id="survey-form">
+       
+        <label class="label" id="name-label" for="name" >Name:</label>
+        <input id="name" type="text" placeholder="..." required>
+        <label class="label" id="email-label" for="email">E-mail:</label>
+        <input id="email" type="email" placeholder="..." required>
+        <label class="label" id="number-label" for="number">Send me this many e-mails per day. Max = 5</label>
+        <input id="number" type="number" min="0" max="5" placeholder="...">
+        <label class="label" id="dropdown-label" for="dropdown" value="dropdown">Favorite Email Type:</label>
+        <select id="dropdown" name="email-type">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="Images">Images</option>
+            <option value="Text">Text</option>
+            <option value="Video">Video</option>
+            <option value="Motivate">Pure Motivational Cat Doodles</option>
+        </select>
+        <p id="radio-label">Current Mood:</p>
+          <input id="depressed" type="radio" name="mood" value="depressed">
+          <label class="radio" for="depressed">Depressed</label><br/>
+          <input id="manic" type="radio" name="mood" value="manic">
+          <label class="radio" for="manic">Manic</label><br/>
+          <input id="rainbow" type="radio" name="mood" value="rainbow">
+          <label class="radio" for="rainbow">All Rainbows!</label><br/>
+          <input id="other" type="radio" name="mood" value="other">
+          <label class="radio" for="other">Other</label><br/>
+        <p id="checkbox-label">Pick your Top 2 Languages of Love:</p>
+          <input type="checkbox" id="touch" name="touch" value="love">
+          <label for="touch">Touch</label><br/>
+          <input type="checkbox" id="verbal" name="verbal" value="love">
+          <label for="verbal">Verbal</label><br/>
+          <input type="checkbox" id="gifts" name="gifts" value="love">
+          <label for="gifts">Gifts</label><br/>
+          <input type="checkbox" id="service" name="service" value="love">
+          <label for="service">Service</label><br/>
+          <input type="checkbox" id="time" name="time" value="love">
+          <label for="time">Time</label><br/>
+          <p id="text-area">Leave your Comments Below:</p>
+          <textarea id="comments" rows="4" cols="50">Hello</textarea>
+        <input type="submit" id="submit">
+          
+    </form>
+</body>
+</html>
+
