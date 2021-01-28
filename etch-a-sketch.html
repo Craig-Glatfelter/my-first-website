@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="etchstyle.css">
+</head>
+<body>
+    <div id = 'mainGridContainer'>
+        <div id = 'header'><h1>Etch-A-Sketch</h1></div>
+        <div id = 'container'></div>
+        <div id = 'leftNav'>
+            <button id = 'clear'>Clear</button>
+        </div>
+    </div>
+
+    <script>
+        const gridDivs = document.querySelector("#container");
+        let n = 40;
+        addElement(n);
+        function addElement (n) {
+            let gridSize = n*n;
+            gridDivs.style['grid-template-columns'] = `repeat(${n}, 1fr)`;
+            gridDivs.style['grid-template-rows'] = `repeat(${n}, 1fr)`;
+            for (let i = 0; i < gridSize; i ++) {
+                const newDiv = document.createElement('div');
+                newDiv.className = 'grid';
+            //`grid${i}`
+                document.body.querySelector('#container').appendChild(newDiv);
+            }
+        }
+        
+        
+        function colorGrid(target) {
+            target.style.backgroundColor = "blue";
+        }
+        gridDivs.addEventListener('mouseover', function(e) {
+            target = e.target;
+            colorGrid(target);
+        });
+
+        const clearButton = document.querySelector('#clear');
+        clearButton.addEventListener('click', function() {
+            window.location.reload();
+        });
+
+        /*const smallSizeButton = document.querySelector('#small');
+        smallSizeButton.addEventListener('click', addElement);
+
+        const bigSizeButton = document.querySelector('#big');
+        bigSizeButton.addEventListener('click', addElement);
+
+        */
+
+
+    </script>
+</body>
+</html>

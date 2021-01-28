@@ -1,0 +1,38 @@
+#mainGridContainer {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'leftNav etch etch etch etch'
+    'leftNav etch etch etch etch'
+    'leftNav etch etch etch etch'
+    'leftNav etch etch etch etch';
+}
+#container {
+    grid-area: etch;
+    display: grid;
+    height: 500px;
+
+}
+#header {
+    grid-area: header;
+    text-align: center;
+}
+#leftNav {
+    grid-area: leftNav;
+    border: 1px solid gray;
+    display: grid; 
+    color: black;
+}
+button {
+    color: blue;
+    background-color: rgba(25, 0, 255, 0.185);
+    font-size: 24px;
+}
+button:hover {
+    background-color: blue;
+    color: white;
+  }
+.grid {
+    background-color: rgba(128, 128, 128, 0.356);
+    border: 1px solid gray;
+}
