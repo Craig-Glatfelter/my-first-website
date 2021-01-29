@@ -1,59 +1,78 @@
 select, textarea {
-    width: 92%;
-    display: block;
-    margin: 10px 5px;
     color: black;
     font-size: large;
-    padding: 10px 5px;
     border-radius: 5px;
     
 }
 form{
     background-color: rgba(36, 160, 209, 0.55);
-    margin: auto 20%;
-    border-radius: 5px;
-    width: 50%;
-    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    margin: auto;
 }
 body{
-    background-image: url(../cat.jpg);
+    background-color: rgba(12, 80, 136, 0.979);
 }
 p{
     color: white;
     font-size: large;
-    padding-left: 5px;
-    text-align: left;
+    text-align: center;
 }
 h1, #description{
     text-align: center;
     color: white;
 }
-#name,#email,#number{
+#name,#email,#number,#dropdown,#comments{
     color:black;
-    padding:2px 5px;
-    margin:10px 5px;
-    position: relative;
-    width: 90%;
     font-size: large;
     border-radius: 5px;
     border: gray solid 2px;
-   
-
+    width: 80%;
+    margin-top: 5px;
+    align-self: center;
 }
 label{
     color: white;
     font-size: large;
-    padding:2px 5px;
-}
-.label{
-    display: block;
-}
-input[type=checkbox]{
-    
+    text-align: center;
 }
 #submit{
-    margin: 10px 5px;
-    padding: 2px 5px;
-    width:95%;
     background-color: rgba(25, 216, 25, .65);
+    width: 50%;
+    align-self: center;
+    margin: 10px;
 }
+
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    list-style-type: none;
+    margin: 1em;
+ }
+ ul :hover{
+   background-color: black;
+ }
+ 
+ li {
+   background-color:  rgba(36, 160, 209, 0.55);
+   flex: 3;
+   border: 2px solid #333;
+   text-align: center;
+   font-size: x-large;
+ }
+ .social {
+   flex: 1;
+ }
+ a {
+   text-decoration: none;
+   color: white;
+ }
+ * {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+  }

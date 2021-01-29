@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="survey-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
-    <script>
-      reverseString = (str) => {
-    let revStr = "";
-    for (let count = str.length - 1; count >= 0; count--) { 
-    revStr += str[count];
-  }
-  return revStr;
-  }
-  prompt("Name:", "");
-    </script>
 </head>
 <body>
+  <nav id="nav-bar">
+    <ul id = "nav-container">
+        <li><a class ="nav-link" href ="index.html">Home</a></li>
+        <li><a class ="nav-link" href="google.com" target="_blank"></a></li>
+        <li><a class ="nav-link" href ="">Home</a></li>
+        <li class = "social"><a class ="fa fa-facebook" href="http://facebook.com" target="_blank"></a></li class = "social">
+        <li class = "social"><a class ="fa fa-github" href="http://Github.com" target="_blank"></a></li>
+        <li class = "social"><a class ="fa fa-linkedin" href="http://linkedin.com" target="_blank"></a></li>
+     </ul>
+  </nav>
     <h1 id="title">Take Another Survey!</h1>
     <p id="description">This is a survey.  Please take this survey for the sake of taking surveys.  You will not be displeased.  After you are finished, you will receive a very rewarding e-mail.  The reward comes from within... </p>  
     <form id="survey-form">

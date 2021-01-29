@@ -28,14 +28,14 @@ h1 {
     margin: auto;
     width: 50%;
     height: 200px;
-    color:rgba(27, 43, 182, 0.466);
+    color:rgb(28, 108, 173);
     text-align: center;
     border: 2px solid rgb(28, 108, 173);
     margin-bottom: 5px;
     
 }
 #results2 {
-    color:rgba(27, 43, 182, 0.466);
+    color:rgb(28, 108, 173);
     margin: auto;
     width: auto;
     height: 200px;
