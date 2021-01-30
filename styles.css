@@ -1,13 +1,10 @@
 #nav-container {
     display: flex;
-    flex-direction: row;
-    align-content: space-between;
     flex: 1;
     align-content: center;
     margin-top: -4px;
     padding: 1em;
     background-color:rgba(10, 70, 105, 0.205);
-    position: sticky;
  }
  .navbar {
    background-color: white;
@@ -42,6 +39,7 @@
    font-size: large;
    display: flex;
    align-items: center;
+   margin: 2px;
  }
  .social {
    flex: 1;

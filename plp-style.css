@@ -1,32 +1,60 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
 #nav-container {
-   display: flex;
-   flex-direction: row;
-   align-content: space-between;
-   align-content: center;
-   list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
-ul :hover{
-  background-color: black;
+li :hover {
+ color: white;
+ background-color: rgb(28, 108, 173);
 }
-
 li {
-  background-color: gray;
-  flex: 3;
-  border: 2px solid #333;
-  text-align: center;
-  font-size: x-large;
+ background-color:  white;
+ flex: 3;
+ border: 2px solid rgb(28, 108, 173);
+ font-size: large;
+ display: flex;
+ margin: 2px;
 }
 .social {
-  flex: 1;
+ flex: 1;
 }
 a {
-  text-decoration: none;
-  color: white;
+ text-decoration: none;
+ color: rgb(28, 108, 173);
+ flex: auto;
+ text-align: center;
 }
+* {
+  margin: 0px;
+  padding: 0px; 
+  outline: none;
+  border: 0px;
+}
+@media screen and (max-width: 450px) {
+  #nav-container {   
+    flex-direction: row;
+    flex-wrap: wrap;
+  }}
+@media screen and (max-width: 450px) {
+    a, .social {   
+      font-size: 12px;
+    }}
+    @media screen and (max-width: 450px) {
+      #vid-container {   
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px !important;
+      }}
   #vid-container {
   display: flex;
   background-color: #333;
-  margin-top: 20px;
+  margin-top: 40px;
   }
   #video {
     flex: 1;
@@ -40,15 +68,14 @@ a {
 
   }
   #pics-container {
-    width: 98vw;
-    margin-top: 30px;
-    margin-left: 10px;
     background-color: #333;
     color:white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
+    grid-template-rows: repeat(2, 20vw);
+    gap: 1em;
+    padding: 1em;
+
 
 
 

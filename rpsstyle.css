@@ -49,48 +49,44 @@ h1 {
     border-radius: 20px;
     margin-top: 20px;
 }
-
-#nav-container {
+  #nav-container {
     display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    flex: 1;
-    align-content: center;
-    margin-top: 0px;
-    padding: 5px;
+    list-style-type: none;
+    margin-bottom: 20px;
  }
- @media screen and (max-width: 450px) {
-  #nav-container {   
-    flex-direction: column;
-  }}
-  @media screen and (max-width: 450px) {
-    li {   
-      font-size: 1em !important;
-    }}
- ul {
-   list-style-type: none;
- }
- 
   li :hover {
-   background-color: rgba(27, 43, 182, 0.466);
    color: white;
+   background-color: rgb(28, 108, 173);
  }
- 
  li {
    background-color:  white;
    flex: 3;
    border: 2px solid rgb(28, 108, 173);
-   border-radius: 10px;
-   font-size: x-large;
+   font-size: large;
    display: flex;
+   margin: 2px;
  }
  .social {
    flex: 1;
  }
  a {
    text-decoration: none;
-   color: rgb(34, 109, 158);
-   flex: 1;
+   color: rgb(28, 108, 173);
+   flex: auto;
    text-align: center;
  }
- 
+ * {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+  }
+@media screen and (max-width: 450px) {
+    #nav-container {   
+      flex-direction: row;
+      flex-wrap: wrap;
+    }}
+@media screen and (max-width: 450px) {
+      a, .social {   
+        font-size: 12px;
+      }}
