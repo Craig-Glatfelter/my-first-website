@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rock - Paper - Scissors</title>
 </head>
-<body>
+<body> 
     <nav id="nav-bar">
         <ul id = "nav-container">
             <li><a class ="nav-link" href ="../../index.html">Home</a></li>
@@ -26,13 +26,15 @@
         <button id = 'sButton'>Scissors</button>
         <button id = 'new'>New Game</button>
     </div>
-    <div id = "results1">
-        <h2>Results</h2>
-        <p id = "resultsP">Computer's pick: <span id = "comp-result"></span></br></br>Player's pick: <span id = "play-result"></span></br></br><span style = "font-size: x-large" id = 'wins'></span></p>
-    </div>
+    <div id = 'resultscontainer'>
+        <div id = "results1">
+            <h2>Results</h2>
+            <p id = "resultsP">Computer's pick: <span id = "comp-result"></span></br></br>Player's pick: <span id = "play-result"></span></br></br><span style = "font-size: x-large" id = 'wins'></span></p>
+        </div>
     <div id = 'results2' >
         <h2>The Score</h2>
         <p id = 'array-count'></p>
+    </div>
     </div>
 
     <script>
@@ -140,13 +142,11 @@
             if (trackPlayerArr.reduce((a, b) => a + b, 0) >= bestOfNumber){
                console.log("The Player Wins!");
                console.log(trackPlayerArr);
-               resultsDiv.style.display = "none";
-               scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)} </br></br> <span style = "font-size: x-large">You Win Best of 3!</span>`;
+               scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)} </br></br> <span style = "font-size: x-large; color :green">You Win Best of 3!</span>`;
             } else if (trackComputerArr.reduce((a, b) => a + b, 0) >= bestOfNumber){
                console.log("Game Over.");
                console.log(trackComputerArr);
-               resultsDiv.style.display = "none";
-               scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)} </br></br> <span style = "font-size: x-large">The Computer Wins Best of 3!</span>`;
+               scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)} </br></br> <span style = "font-size: x-large; color: red;" >The Computer Wins Best of 3!</span>`;
                }
             }
         }
