@@ -23,6 +23,9 @@ p{
 h1, #description{
     text-align: center;
     color: white;
+    margin: auto;
+    margin-top: 30px;
+    width: 70%;
 }
 #name,#email,#number,#dropdown,#comments{
     color:black;
@@ -45,34 +48,41 @@ label{
     margin: 10px;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
 #nav-container {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    list-style-type: none;
-    margin: 1em;
- }
- ul :hover{
-   background-color: black;
- }
- 
- li {
-   background-color:  rgba(36, 160, 209, 0.55);
-   flex: 3;
-   border: 2px solid #333;
-   text-align: center;
-   font-size: x-large;
- }
- .social {
-   flex: 1;
- }
- a {
-   text-decoration: none;
-   color: white;
- }
- * {
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
-  }
+  display: flex;
+  list-style-type: none;
+}
+li :hover {
+ color: white;
+ background-color: rgb(28, 108, 173);
+}
+li {
+ background-color:  white;
+ flex: 3;
+ border: 2px solid rgb(28, 108, 173);
+ font-size: large;
+ display: flex;
+ margin: 2px;
+}
+.social {
+ flex: 1;
+}
+a {
+ text-decoration: none;
+ color: rgb(28, 108, 173);
+ flex: auto;
+ text-align: center;
+}
+* {
+  margin: 0px;
+  padding: 0px; 
+  outline: none;
+  border: 0px;
+}

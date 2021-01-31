@@ -1,9 +1,10 @@
-
 h1, h2{
     color: rgb(34, 109, 158);
     text-align: center;
 }
-
+p {
+    text-align: center;
+}
 #main {
     background-color: rgba(128, 128, 128, 0.2);
     position: relative;
