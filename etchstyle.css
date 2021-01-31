@@ -36,3 +36,34 @@ button:hover {
     background-color: rgba(128, 128, 128, 0.356);
     border: 1px solid gray;
 }
+  #nav-container {
+    display: flex;
+    list-style-type: none;
+ }
+  li :hover {
+   color: white;
+   background-color: rgb(28, 108, 173);
+ }
+ li {
+   background-color:  white;
+   flex: 3;
+   border: 2px solid rgb(28, 108, 173);
+   font-size: large;
+   display: flex;
+   margin: 2px;
+ }
+ .social {
+   flex: 1;
+ }
+ a {
+   text-decoration: none;
+   color: rgb(28, 108, 173);
+   flex: auto;
+   text-align: center;
+ }
+ * {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+  }

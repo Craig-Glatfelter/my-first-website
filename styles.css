@@ -23,6 +23,10 @@
     #welcome {   
       font-size: 1em !important;
     }}
+  @media screen and (max-width: 550px) {
+      .description {   
+        font-size: .5em !important;
+      }}
 
  ul {
    list-style-type: none;
@@ -80,7 +84,7 @@
     display: grid;
     grid-template-columns: 20% 40%;
     grid-template-rows: repeat(3, 20vw);
-    gap: 2em;
+    gap: 3em;
     padding: 1em;
     justify-content: center;
   }
