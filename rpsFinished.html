@@ -32,7 +32,7 @@
             <p id = "resultsP">Computer's pick: <span id = "comp-result"></span></br></br>Player's pick: <span id = "play-result"></span></br></br><span style = "font-size: x-large" id = 'wins'></span></p>
         </div>
     <div id = 'results2' >
-        <h2>The Score</h2>
+        <h2>The Score</h2><br>
         <p id = 'array-count'></p>
     </div>
     </div>
@@ -108,35 +108,35 @@
                 resultsComp.innerHTML = `${compChoice}`;
                 resultsPlay.innerHTML = `${playChoice}`;
                 resultWin.innerHTML = `${whoWins}`;
-                scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
+                scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br><br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
                 } else if (compChoice === "rock" && playChoice === "scissors") {
                 whoWins = "Computer wins.";
                 trackComputerArr.push(1);
                 resultsComp.innerHTML = `${compChoice}`;
                 resultsPlay.innerHTML = `${playChoice}`;
                 resultWin.innerHTML = `${whoWins}`;
-                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
+                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br><br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
                 } else if (compChoice === "paper" && playChoice === "rock") {
                 whoWins = "Computer wins.";
                 trackComputerArr.push(1);
                 resultsComp.innerHTML = `${compChoice}`;
                 resultsPlay.innerHTML = `${playChoice}`;
                 resultWin.innerHTML = `${whoWins}`;
-                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
+                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br><br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
                 } else if (compChoice === "scissors" && playChoice === "paper") {
                 whoWins = "Computer wins.";
                 trackComputerArr.push(1);
                 resultsComp.innerHTML = `${compChoice}`;
                 resultsPlay.innerHTML = `${playChoice}`;
                 resultWin.innerHTML = `${whoWins}`;
-                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
+                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br><br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
                 } else {
                 whoWins = 'Players wins!'
                 trackPlayerArr.push(1);
                 resultsComp.innerHTML = `${compChoice}`;
                 resultsPlay.innerHTML = `${playChoice}`;
                 resultWin.innerHTML = `${whoWins}`;
-                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
+                    scoreDiv.innerHTML = `Player's Score: ${trackPlayerArr.reduce((a, b) => a + b, 0)} <br><br> Computer's Score: ${trackComputerArr.reduce((a, b) => a + b, 0)}`
             }
         
             if (trackPlayerArr.reduce((a, b) => a + b, 0) >= bestOfNumber){

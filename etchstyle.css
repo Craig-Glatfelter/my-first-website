@@ -45,7 +45,7 @@ button:hover {
    background-color: rgb(28, 108, 173);
  }
  li {
-   background-color:  white;
+   background-color:  #d1d1d1;
    flex: 3;
    border: 2px solid rgb(28, 108, 173);
    font-size: large;
@@ -66,4 +66,7 @@ button:hover {
     padding: 0px; 
     outline: none;
     border: 0px;
+  }
+  body {
+    background-color: #d1d1d1;
   }

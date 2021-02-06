@@ -36,29 +36,35 @@
             <option value="Text">Text</option>
             <option value="Video">Video</option>
             <option value="Motivate">Pure Motivational Cat Doodles</option>
-        </select>
-        <p id="radio-label">Current Mood:</p>
-          <input id="depressed" type="radio" name="mood" value="depressed">
-          <label class="radio" for="depressed">Depressed</label><br/>
-          <input id="manic" type="radio" name="mood" value="manic">
-          <label class="radio" for="manic">Manic</label><br/>
-          <input id="rainbow" type="radio" name="mood" value="rainbow">
-          <label class="radio" for="rainbow">All Rainbows!</label><br/>
-          <input id="other" type="radio" name="mood" value="other">
-          <label class="radio" for="other">Other</label><br/>
-        <p id="checkbox-label">Pick your Top 2 Languages of Love:</p>
-          <input type="checkbox" id="touch" name="touch" value="love">
-          <label for="touch">Touch</label><br/>
-          <input type="checkbox" id="verbal" name="verbal" value="love">
-          <label for="verbal">Verbal</label><br/>
-          <input type="checkbox" id="gifts" name="gifts" value="love">
-          <label for="gifts">Gifts</label><br/>
-          <input type="checkbox" id="service" name="service" value="love">
-          <label for="service">Service</label><br/>
-          <input type="checkbox" id="time" name="time" value="love">
-          <label for="time">Time</label><br/>
+        </select><br>
+        <div id = 'con'>
+          <div id = 'item1'>
+            <p id="radio-label">Current Mood:</p><br>
+            <input id="depressed" type="radio" name="mood" value="depressed">
+            <label class="radio" for="depressed">Depressed</label><br/>
+            <input id="manic" type="radio" name="mood" value="manic">
+            <label class="radio" for="manic">Manic</label><br/>
+            <input id="rainbow" type="radio" name="mood" value="rainbow">
+            <label class="radio" for="rainbow">All Rainbows!</label><br/>
+            <input id="other" type="radio" name="mood" value="other">
+            <label class="radio" for="other">Other</label><br/>
+          </div>
+          <div id = 'item2'>
+            <p id="checkbox-label">Pick your Top 2 Languages of Love:</p><br>
+            <input type="checkbox" id="touch" name="touch" value="love">
+            <label for="touch">Touch</label><br/>
+            <input type="checkbox" id="verbal" name="verbal" value="love">
+            <label for="verbal">Verbal</label><br/>
+            <input type="checkbox" id="gifts" name="gifts" value="love">
+            <label for="gifts">Gifts</label><br/>
+            <input type="checkbox" id="service" name="service" value="love">
+            <label for="service">Service</label><br/>
+            <input type="checkbox" id="time" name="time" value="love">
+            <label for="time">Time</label><br/>
+          </div>
+        </div>
           <p id="text-area">Leave your Comments Below:</p>
-          <textarea id="comments" rows="4" cols="50">Hello</textarea>
+          <textarea id="comments" rows="4" cols="50" placeholder="I love cats!"></textarea>
         <input type="submit" id="submit">
           
     </form>
