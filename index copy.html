@@ -9,7 +9,8 @@
 </head>
 <body>
     <div id = "big-img">
-        <p id = "welcome" >Craig Glatfelter</p>
+        <img src = 'cat1.jpg' id = 'cat'>
+        <p id = "welcome" >Welcome!</br> My name is Craig.</p>
     </div>
     <nav class = 'navbar'>
         <ul id = "nav-container">
@@ -22,23 +23,11 @@
             <li class = "social"><a class ="fa fa-linkedin" href="http://linkedin.com" target="_blank"></a></li>
          </ul>
     </nav>
+    <h2>Projects</h2>
     <div id = "project-container">
         <div class = 'project'><a href ="rpsFinished.html"><img src = 'rps.png' id = 'projectimg'></a></div>
-        <div class = 'project-description'>
-            <h2>Rock - Paper - Scissors</h2>
-            <div class = 'buttons'>
-                <button>HTML</button>
-                <button>CSS</button>
-                <button>JavaScript</button>
-                <button>Responsive</button>
-            </div>
-            <p class = 'description'>This is a game I made using HTML, CSS, and Javascript.  This is the first project that I created using event listeners.</p>
-        </div>
-        <div class = 'project'>
-            <a href = "etch-a-sketch.html">
-                <img src = 'etch.png' id = 'projectimg'>
-            </a>
-        </div>
+        <div class = 'project-description'><p class = 'description'>Rock - Paper - Scissors <br><br>This is a game I made using HTML, CSS, and Javascript.  This is the first project that I created using event listeners.  </p></div>
+        <div class = 'project'><a href = "etch-a-sketch.html"><img src = 'etch.png' id = 'projectimg'></a></div>
         <div class = 'project-description'><p class = 'description'>Etch-A-Sketch<br><br>This is a project I made using HTML, CSS, and Javascript.  I created this project while following The Odin Project's Foundations course. </p></div>
         <div class = 'project'><img src = 'craig1.jpg' id = 'projectimg'></div>
         <div class = 'project-description'></div>
@@ -46,7 +35,17 @@
         <div class = 'project-description'></div>
     </div>
     <script>
+        document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        const navbarHeight = 200;
 
+        const distanceFromTop = Math.abs(
+        document.body.getBoundingClientRect().top
+         );
+
+        if (distanceFromTop >= navbarHeight) navbar.classList.add("fixed-top");
+        else navbar.classList.remove("fixed-top");
+        });
     </script>
 </body>
 </html>
