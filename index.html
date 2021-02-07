@@ -23,7 +23,7 @@
          </ul>
     </nav>
     <div id = "project-container">
-        <div class = 'project'><a href ="rpsFinished.html"><img src = 'rps.png' id = 'projectimg'></a></div>
+        <div class = 'project'><a href ="rpsFinished.html"><img src = 'rps.PNG' id = 'projectimg'></a></div>
         <div class = 'project-description'>
             <h2>Rock - Paper - Scissors</h2>
             <div class = 'buttons'>
@@ -36,7 +36,7 @@
         </div>
         <div class = 'project'>
             <a href = "etch-a-sketch.html">
-                <img src = 'etch.png' id = 'projectimg'>
+                <img src = 'etch.PNG' id = 'projectimg'>
             </a>
         </div>
         <div class = 'project-description'>
@@ -55,7 +55,17 @@
         <div class = 'project-description'></div>
     </div>
     <script>
+        document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        const navbarHeight = 100;
 
+        const distanceFromTop = Math.abs(
+        document.body.getBoundingClientRect().top
+         );
+
+        if (distanceFromTop >= navbarHeight) navbar.classList.add("fixed-top");
+        else navbar.classList.remove("fixed-top");
+        });
     </script>
 </body>
 </html>
