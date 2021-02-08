@@ -33,10 +33,6 @@
     #welcome {   
       font-size: 1em !important;
     }}
-  @media screen and (max-width: 550px) {
-      .description {   
-        font-size: .5em !important;
-      }}
       @media screen and (max-width: 550px) {
         #project-container {
           display: grid;
