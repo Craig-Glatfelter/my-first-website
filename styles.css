@@ -37,6 +37,15 @@
       .description {   
         font-size: .5em !important;
       }}
+      @media screen and (max-width: 550px) {
+        #project-container {
+          display: grid;
+          grid-template-columns: 70% !important;
+        }}
+        @media screen and (max-width: 550px) {
+          .project-description {
+            border-bottom: 2px solid white;
+          }}
 
  ul {
    list-style-type: none;
