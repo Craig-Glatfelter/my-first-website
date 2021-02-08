@@ -130,13 +130,11 @@ a {
     font-size: xx-large;
   }
   @media screen and (max-width: 975px) {
-    .dark {   
-      overflow: scroll;
+    .dark {  
     }}
     @media screen and (max-width: 975px) {
       .light {   
         font-size: medium !important;
-        overflow: scroll;
       }}
       @media screen and (max-width: 975px) {
         #container {   
