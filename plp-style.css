@@ -149,6 +149,6 @@ a {
         
           @media screen and (max-width: 875px) {
             #strip, #mainpic {   
-              width: 200px;
+              max-width: 100vw;
       
             }}
