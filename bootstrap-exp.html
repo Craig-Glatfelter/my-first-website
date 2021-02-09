@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Experiment</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Bootstrap Experiment</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ProductLandingPage.html">Calvin and Hobbes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="rpsFinished.html">Rock paper Scissors</a></li>
+                  <li><a class="dropdown-item" href="etch-a-sketch.html">Etch-A-sketch</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Coming Soon!</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class = "container-fluid">
+        <div class = 'row align-items-center g-10 bg-secondary text-white '>  
+            <div class = 'col-6'>
+                <a href ="rpsFinished.html">
+                    <img src = 'rps.PNG' class = 'w-75 rounded-3 m-4'></a>
+            </div>
+            <div class = 'col-6 text-center'>
+                <h2>Rock - Paper - Scissors</h2>
+                    <button class= 'btn btn-primary disabled'>HTML</button>
+                    <button class= 'btn btn-primary disabled'>CSS</button>
+                    <button class= 'btn btn-primary disabled'>JavaScript</button>
+                    <button class= 'btn btn-primary disabled'>Responsive</button>
+                    <p class = 'description'>This game was made using HTML, CSS, and Javascript.  This was created using event listeners.</p>
+            </div>
+        </div>
+        <div class = 'row align-items-center g-10'> 
+            <div class = 'col text-center'>
+                <h2>Etch-A-Sketch</h2>
+                    <button class= 'btn btn-secondary disabled'>HTML</button>
+                    <button class= 'btn btn-secondary disabled'>CSS</button>
+                    <button class= 'btn btn-secondary disabled'>JavaScript</button>
+                    <button class= 'btn btn-secondary disabled'>Responsive</button>
+                <p class = 'description'>This project was made using HTML, CSS, and Javascript.  The project was created while following The Odin Project's Foundations course. </p>
+            </div>
+            <div class = 'col'>
+                <a href = "etch-a-sketch.html">
+                    <img src = 'etch.PNG' class ='w-75 rounded-3 m-4'>
+                </a>
+            </div>
+            
+        </div>
+      </div>
+
+
+   <script src="bootstrap.min.js"></script> 
+</body>
+</html>
