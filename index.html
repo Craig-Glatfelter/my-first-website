@@ -8,9 +8,7 @@
     <title>Craig's Portfolio</title>
 </head>
 <body>
-    <div id = "big-img">
-        <p id = "welcome" >Craig Glatfelter</p>
-    </div>
+    
     <nav class = 'navbar'>
         <ul id = "nav-container">
             <li><a class ="nav-link" href ="index.html">Home</a></li>
@@ -23,8 +21,17 @@
             <li class = "social"><a class ="fa fa-linkedin" href="http://linkedin.com" target="_blank"></a></li>
          </ul>
     </nav>
+    <div id = "big-img">
+        <p id = "welcome" >Craig Glatfelter</p>
+    </div>
+    <div id = "big-img">
+        <h1 id = "proj" >Projects</h1>
+    </div>
+
+    <!-- container -->
     <div id = "project-container">
-        <div class = 'project'><a href ="rpsFinished.html"><img src = 'rps.PNG' id = 'projectimg'></a></div>
+        <div class = 'project'><a href ="rpsFinished.html"><img src = 'rps.PNG' class = 'projectimg'></a>
+        </div>
         <div class = 'project-description'>
             <h2>Rock - Paper - Scissors</h2>
             <div class = 'buttons'>
@@ -32,14 +39,12 @@
                 <button>CSS</button>
                 <button>JavaScript</button>
                 <button>Responsive</button>
-        </div>
+            </div>
             <p class = 'description'>This game was made using HTML, CSS, and Javascript.  This was created using event listeners.</p>
         </div>
-        <div class = 'project'>
-            <a href = "etch-a-sketch.html">
-                <img src = 'etch.PNG' id = 'projectimg'>
-            </a>
-        </div>
+    </div>
+    <!-- container 2 -->
+    <div id = "project-container1">
         <div class = 'project-description'>
             <h2>Etch-A-Sketch</h2>
             <div class = 'buttons'>
@@ -50,15 +55,27 @@
             </div>
             <p class = 'description'>This project was made using HTML, CSS, and Javascript.  The project was created while following The Odin Project's Foundations course. </p>
         </div>
-        <div class = 'project'><img src = 'craig1.jpg' id = 'projectimg'></div>
+        <div class = 'project'>
+            <a href = "etch-a-sketch.html">
+                <img src = 'etch.PNG' class = 'projectimg'>
+            </a>
+        </div>
+    </div>
+    <!-- container 3 -->
+    <div id = "project-container">
+        <div class = 'project'><img src = 'craig1.jpg' class = 'projectimg'></div>
         <div class = 'project-description'></div>
-        <div class = 'project'><img src = 'cat.jpg' id = 'projectimg'></div>
+    </div>
+    <!-- container 4 -->
+    <div id = "project-container1">
+        <div class = 'project'><img src = 'cat.jpg' class = 'projectimg'></div>
         <div class = 'project-description'></div>
+    </div>
     </div>
     <script>
         document.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");
-        const navbarHeight = 100;
+        const navbarHeight = 50;
 
         const distanceFromTop = Math.abs(
         document.body.getBoundingClientRect().top
