@@ -55,8 +55,8 @@ a {
 }
 #project-container {
   display: grid;
-  grid-template-columns: 30% 40%;
-  gap: 3em;
+  grid-template-columns: 20% 30%;
+  gap: 5em;
   padding: 1em;
   margin-top: 1em;
   justify-content: center;
@@ -88,34 +88,62 @@ a {
   background-size: cover;
 }
 .buttons {
-  font-family: "Open Sans";
+  
   display: flex;
   flex-wrap: wrap;
 }
 .buttons button {
   flex: 1;
   border-radius: 5px;
-  margin: 1em;
+  margin: .5em;
   border: 2px solid rgb(28, 108, 173);
-  background-color: #569de8;
-  color: white;
-  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(28, 108, 173);
+  padding: 1px;
+  font-family: "Open Sans";
+  font-size: 1em;
 }
+.active-buttons{
+  display: flex;
+}
+.active-buttons button {
+  flex: 1;
+  border-radius: 5px;
+  margin: 1em;
+  background-color: rgb(28, 108, 173);
+  padding: 5px;
+  font-family: "Open Sans";
+  font-size: 1em;
+  color: white;
+}
+.active {
+  display: flex;
+}
+.active :hover {
+  color: rgb(28, 108, 173);
+  background-color: white;
+ }
 .description {
   text-align: center;
   font-family: "Open Sans";
-  color: black;
-  font-size: 1.5em;
+  color:rgb(28, 108, 173);
+  font-size: 1em;
+  padding: 1em;
 }
 h1,
-h2,
 h3 {
   color: white;
   text-align: center;
   font-family: "Open Sans";
 }
 h2 {
-  color: black;
+  color: rgb(28, 108, 173);
+  text-align: center;
+  font-family: "Open Sans";
+}
+#proj {
+  color: white;
+  font-size: 1.9em;
   text-align: center;
   font-family: "Open Sans";
 }
@@ -159,7 +187,7 @@ body {
     font-size: 1em !important;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   #project-container {
     display: grid;
     grid-template-columns: 70% !important;
