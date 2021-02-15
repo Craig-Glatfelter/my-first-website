@@ -46,6 +46,13 @@ a {
 }
 #logo {
   width: 40%;
+  animation-name: logo;
+  animation-duration: 2s;
+}
+@keyframes logo {
+  0%, 20%, 50%, 80%, 100% {transform: translateX(0);} 
+   40% {transform: translateX(-30px);} 
+   60% {transform: translateX(35px);}
 }
 * {
   margin: 0px;

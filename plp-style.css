@@ -104,6 +104,10 @@ a {
   width: auto;
   flex: auto;
 }
+.calvin1 {
+  width: 400px;
+  height: 400px;
+}
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -116,7 +120,7 @@ a {
   color: white;
   font-size: 1rem;
   font-family: monospace;
-  flex: 1;
+  flex: 1; 
   align-self: center;
   text-align: center;
   padding: 1em;
