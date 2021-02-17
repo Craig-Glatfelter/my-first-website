@@ -49,6 +49,21 @@ a {
   animation-name: logo;
   animation-duration: 2s;
 }
+@-webkit-keyframes logo {
+  0%, 20%, 50%, 80%, 100% {transform: scale(1.1);} 
+   40% {transform: translateX(-30px);} 
+   60% {transform: translateX(35px);}
+}
+@-moz-keyframes logo {
+  0%, 20%, 50%, 80%, 100% {transform: scale(1.1);} 
+   40% {transform: translateX(-30px);} 
+   60% {transform: translateX(35px);}
+}
+@-o-keyframes logo {
+  0%, 20%, 50%, 80%, 100% {transform: scale(1.1);} 
+   40% {transform: translateX(-30px);} 
+   60% {transform: translateX(35px);}
+}
 @keyframes logo {
   0%, 20%, 50%, 80%, 100% {transform: scale(1.1);} 
    40% {transform: translateX(-30px);} 
