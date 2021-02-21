@@ -1,48 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calc-style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calc-style.css" />
     <title>Calculator</title>
-</head>
-<body>
-    <div id = 'container'>
-            <div id = 'screen'>Hi</div>
-            <button class = 'btn clear'>Clear</button>
-            <button class = 'btn back'>Back</button>
-            <button class = 'btn divide'>/</button>
-            <button class = 'btn 7'>7</button>
-            <button class = 'btn 8'>8</button>
-            <button class = 'btn 9'>9</button>
-            <button class = 'btn times'>*</button>
-            <button class = 'btn 4'>4</button>
-            <button class = 'btn 5'>5</button>
-            <button class = 'btn 6'>6</button>
-            <button class = 'btn minus'>-</button>
-            <button class = 'btn 1'>1</button>
-            <button class = 'btn 2'>2</button>
-            <button class = 'btn 3'>3</button>
-            <button class = 'btn plus' id = 'plus1'>+</button>
-            <button class = 'btn 0'>0</button>
-            <button class = 'btn point'>.</button>
-            <button class = 'btn equals'>=</button>
+  </head>
+  <body>
+    <div id="container">
+      <div id="screen"></div>
+      <div class="pic">
+        <img src="logo_transparent.png" alt="" />
+      </div>
+      <button class="btn clear">Clear</button>
+      <button class="btn divide">/</button>
+      <button class="btn nums" id="7">7</button>
+      <button class="btn nums" id="8">8</button>
+      <button class="btn nums" id="9">9</button>
+      <button class="btn times">*</button>
+      <button class="btn nums" id="4">4</button>
+      <button class="btn nums" id="5">5</button>
+      <button class="btn nums" id="6">6</button>
+      <button class="btn minus">-</button>
+      <button class="btn nums" id="1">1</button>
+      <button class="btn nums" id="2">2</button>
+      <button class="btn nums" id="3">3</button>
+      <button class="btn plus" id="plus1">+</button>
+      <button class="btn nums" id="0">0</button>
+      <button class="btn point" id=".">.</button>
+      <button class="btn equals">=</button>
     </div>
     <script>
-        const display = document.getElementById("screen");
-        const back = document.querySelector('.back');
-        const plus = document.getElementById("plus1");
-        const minus = document.querySelector('.minus');
-        const times = document.querySelector('.times');
-        const divide = document.querySelector('.divide');
-        const equals = document.querySelector('.equals');
-        const nums = document.querySelectorAll('.btn');
+      const display = document.getElementById("screen");
+      const plus = document.getElementById("plus1");
+      const minus = document.querySelector(".minus");
+      const times = document.querySelector(".times");
+      const division = document.querySelector(".divide");
+      const equals = document.querySelector(".equals");
+      const point = document.querySelector(".point");
+      const nums = document.querySelectorAll(".nums");
 
-        
-        plus.addEventListener("click", () => { display.textContent = " + ";} );
-        
+      let x = "";
+      let y = "";
+      let z;
 
+      //operator functions
+      const add = (x, y) => {
+        return x + y;
+      };
+      const subtract = (x, y) => {
+        return x - y;
+      };
+      const multiply = (x, y) => {
+        return x * y;
+      };
+      const divide = (x, y) => {
+        return x / y;
+      };
+
+      //Operator function
+      const evaluate = (x, y, z) => {
+        if (z === "+") {
+          return add(x, y);
+        } else if (z === "-") {
+          return subtract(x, y);
+        } else if (z === "*") {
+          return multiply(x, y);
+        } else if (z === "/") {
+          return divide(x, y);
+        } else {
+          alert("oops");
+        }
+      };
+
+      nums.forEach(function (i) {
+        i.addEventListener("click", num);
+      });
+
+      let arr = [];
+      function num(e) {
+        display.textContent += e.target.id;
+
+        if (
+          arr.includes("+") ||
+          arr.includes("*") ||
+          arr.includes("-") ||
+          arr.includes("/")
+        ) {
+          console.log("includes operator");
+          y = y + e.target.id;
+          arr.push(e.target.id);
+          return y;
+        } else {
+          x = x + e.target.id;
+          arr.push(e.target.id);
+          console.log(arr);
+          return x;
+        }
+      }
+
+      point.addEventListener("click", num);
+
+      plus.addEventListener("click", () => {
+        display.textContent += " + ";
+        arr.push("+");
+        z = "+";
+        return z;
+      });
+      times.addEventListener("click", () => {
+        display.textContent += " * ";
+        arr.push("*");
+        z = "*";
+        return z;
+      });
+      division.addEventListener("click", () => {
+        display.textContent += " / ";
+        arr.push("/");
+        z = "/";
+        return z;
+      });
+      minus.addEventListener("click", () => {
+        display.textContent += " - ";
+        arr.push("-");
+        z = "-";
+        return z;
+      });
+
+      //Equals calls Evaluate
+      const run = () => {
+        x = parseFloat(x);
+        y = parseFloat(y);
+        console.log(x, y, z);
+        console.log(evaluate(x, y, z));
+        display.textContent = evaluate(x, y, z);
+        arr = [];
+        equals.style = 'background-color: red; transform: scale(.9);';
+        equals.addEventListener('mouseleave', () => {
+            equals.style = 'background-color: rgb(165, 165, 165);';
+            display.textContent = '';
+            x = "";
+            y = "";
+            z = "";
+            arr = [];
+        })
+      };
+      equals.addEventListener("click", run);
+
+      // clear button
+      const clear = document.querySelector(".clear");
+      clear.addEventListener("click", () => {
+        display.textContent = "";
+        x = "";
+        y = "";
+        z = "";
+        arr = [];
+      });
     </script>
-</body>
+  </body>
 </html>
