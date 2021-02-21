@@ -40,6 +40,9 @@
       const equals = document.querySelector(".equals");
       const point = document.querySelector(".point");
       const nums = document.querySelectorAll(".nums");
+      const btns = document.querySelectorAll(".btn");
+      btns.forEach((i) => {i.addEventListener('mouseenter', () => {i.style = "transform: scale(1.05)"})})
+      btns.forEach((i) => {i.addEventListener('mouseleave', () => {i.style = "transform: scale(1)"})})
 
       let x = "";
       let y = "";
@@ -69,8 +72,6 @@
           return multiply(x, y);
         } else if (z === "/") {
           return divide(x, y);
-        } else {
-          alert("oops");
         }
       };
 
@@ -134,16 +135,19 @@
         console.log(x, y, z);
         console.log(evaluate(x, y, z));
         display.textContent = evaluate(x, y, z);
+        x = evaluate(x, y, z);
         arr = [];
-        equals.style = 'background-color: red; transform: scale(.9);';
-        equals.addEventListener('mouseleave', () => {
-            equals.style = 'background-color: rgb(165, 165, 165);';
-            display.textContent = '';
-            x = "";
-            y = "";
-            z = "";
-            arr = [];
-        })
+        equals.style = "background-color: red; transform: scale(.9);";
+        equals.addEventListener("mouseleave", () => {
+          equals.style = "background-color: rgb(165, 165, 165);";
+        //   display.textContent = "";
+        //   x = "";
+        //   y = "";
+        //   z = "";
+        //   arr = [];
+        });
+        y = '';
+        return x;
       };
       equals.addEventListener("click", run);
 
