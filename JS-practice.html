@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+//         Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+// The binary number returned should be a string.
+function addBinary(a,b) {
+  const byTwo = (total) => {return total/2;}
+    let sum = a + b;
+    let arr = [];
+    let decrease = sum;
+    if (decrease/2 != 1) {
+        decrease = byTwo(sum);
+    }
+}
 
 
+        //reverse big words in a string
+    //   function spinWords(str) {
+    //     let arr = str.split(" ");
+    //     console.log(arr);
+    //     let newArr = [];
+    //     arr.forEach((item) => {
+    //       if (item.length > 4) {
+    //         let word = "";
+    //         item.split('');
+    //         console.log(item);
+    //         word = item.split("").reverse().join("");
+    //         newArr.push(word);
+    //       } else {
+    //         newArr.push(item);
+    //       }
+    //     });
+    //     return newArr.join(" ");
+    //   }
+
+    //   console.log(spinWords("Hey fellow warriors is what i always wanted!"));
     </script>
-</body>
+  </body>
 </html>
