@@ -38,10 +38,12 @@ body {
 .pic {
     grid-column: 1/2;
     display: flex;
+    justify-content: center;
 }
 .pic img {
     flex: 1;
     width: 100%;
+    align-self: center;
 }
 .clear {
     grid-column: 2/4;
