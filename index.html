@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="css/styles1.css?version=1" />
     <link rel="icon" href="images/favicon.png" />
 
@@ -10,49 +11,59 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://kit.fontawesome.com/7c10122b7d.js" crossorigin="anonymous"></script>
     <title>Craig's Portfolio</title>
   </head>
   <body>
-    <nav class="navbar">
-      <ul id="nav-container">
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li>
-          <a class="nav-link" href="calvin.html">Calvin and Hobbes</a>
-        </li>
-        <li><a class="nav-link" href="./lwc/lwc.html">LWC</a></li>
-        <li><a class="nav-link" href="survey.html">Survey</a></li>
-        <li>
-          <a class="nav-link" href="tribute.html" target="_blank">Liberia</a>
-        </li>
-        <li class="social">
-          <a
-            class="fa fa-facebook"
-            href="http://facebook.com"
-            target="_blank"
-          ></a>
-        </li>
-        <li class="social">
-          <a
-            class="fa fa-github"
-            href="https://github.com/Craig-Glatfelter"
-            target="_blank"
-          ></a>
-        </li>
-        <li class="social">
-          <a
-            class="fa fa-linkedin"
-            href="http://linkedin.com"
-            target="_blank"
-          ></a>
-        </li>
-      </ul>
-    </nav>
+    <div id = 'nav-bar'> 
+         <div id = 'menu-icon'>
+           <i id = 'menu-bars' class=" bars fas fa-bars"></i>
+         </div>
+       <nav class = 'nav-main' >
+           <a class = 'nav-link' href="./index.html"><div class = 'nav-text'>Home</div></a>
+           <div id = 'drop-container1' class = 'nav-link'>
+             <a href="#">
+               <div id = 'drop-main' class = 'nav-text'>Projects</div>
+             </a>
+             <a href="./rpsFinished.html">
+               <div class = 'nav-text drop1 drop-text drop-border'>RPS Game</div>
+             </a>
+             <a href="./calc.html">
+               <div class = 'nav-text drop1 drop-text drop-border'>Calculator</div>
+             </a>
+             <a href="./etch-a-sketch.html">
+               <div class = 'nav-text drop1 drop-text drop-border'>Etch A Sketch</div>
+             </a>
+           </div>
+           <div id = 'drop-container2' class = 'nav-link'>
+             <a href="#">
+               <div id = 'drop-main' class = 'nav-text'>Pages</div>
+             </a>
+             <a href="./calvin.html">
+               <div class = 'nav-text drop2 drop-text drop-border'>Calvin and Hobbes</div>
+             </a>
+             <a href="./tribute.html">
+               <div class = 'nav-text drop2 drop-text drop-border'>Liberia</div>
+             </a>
+           </div>
+           <div id = 'drop-container3' class = 'nav-link'>
+             <a href="#">
+               <div id = 'drop-main' class = 'nav-text'>Websites</div>
+             </a>
+             <a href="#">
+               <div class = 'nav-text drop3 drop-text'>Old Tree Media</div>
+             </a>
+           </div>
+           <a class = 'nav-link' href="https://mailchi.mp/0b4d3a0defa0/5n0yl9q1f9" target = '_blank'><div class = 'nav-text'>Contact Us!</div></a>
+       </nav>
+       </div>
+    
 
     <div id="big-img">
-      <img id="logo" src="images/logo_transparent.png" alt="logo" />
+      <img id="logo" src="images/craigs-coding-final-min.png" alt="logo" />
     </div>
     <div>
-      <p id="proj">Projects</p>
+      <h1 id="proj">Projects</h1>
     </div>
     <!-- container 3 -->
     <div id="project-container">
@@ -162,5 +173,6 @@
         else navbar.classList.remove("fixed-top");
       });
     </script>
+    <script src="./Script.js?ver=1"></script>
   </body>
 </html>
